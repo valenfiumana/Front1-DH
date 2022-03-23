@@ -6,21 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Web Petshop </title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="bg-black">
+        <div class="header">
             <p> Grandes ofertas en comederos </p>
-            <button type="button"> Español </button>
-            <button type="button"> ARG$ </button>
+            
+            <form class="language-switcher " method="get"action="#">
+                <select name="lang">
+                    <option value="es-ES">Español (ES)</option>
+                    <option value="en-US">English (US)</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="es-ES">Español</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </form>
+
+            <form class="coin-switcher " method="get"action="#">
+                <select name="coin">
+                    <option value="peso"> ARG ($) </option>
+                    <option value="dolar"> US (USD)</option>
+                    <option value="real"> Brasil (R$)</option>
+                    <option value="euro"> España (€) </option>
+                </select>
+            </form>
+
         </div>
 
 
-        <section class="bg-orange">
-            <a href="petShop.html"> <img src="img\Logo.png" alt="Logo"> </a>
+        <section class="nav-bar">
+            <a href="petShop.html"> <img src="img\cat.png" alt="gato"> </a>
+            <a href="petShop.html" class="front"> Front </a> 
+            <a href="petShop.html" class="cat&dog"> Cat&Dog </a> 
+            <a href="petShop.html"> <img src="img\dog.png" alt="perro"> </a>
             <nav>
-                <ul>
+                <ul class="list-pawprint">
                     <li><a href="">Categorias</a></li>
                     <li><a href="">Pets</a></li>
                     <li><a href="">Nosotros</a></li>
@@ -36,46 +59,45 @@
             <img width="100%" src="img/bowl-and-pet.png" alt="Comida para perros">
             <h2> ¡Es un placer tenerte aquí! </h2>
             <p> ¡Comederos en descuento! </p>
-            <button type="button"> COMEDEROS </button>
+            <button type="button" class="boton-producto"> COMEDEROS </button>
         </section>
-        
 
-        <section>
-            <h1> Productos Destacados</h1>
+        <section class="destacados">
+            <h1 class="title"> Productos Destacados</h1>
             <img src = "img/pawprint.png" alt="Huellita">
             <ul>
-                <li> Comederos </li>
-                <li> Accesorios </li>
-                <li> Comida </li>
+                <li class="link-producto"> Comederos </li>
+                <li class="link-producto"> Accesorios </li>
+                <li class="link-producto"> Comida </li>
             </ul>
 
-            <article>
+            <article class="juguete">
                 <a href="#"> <img src="img/churrasquito.png" alt="Juguete churrasquito"> </a>
-                <h3> Juguete Churrasquito </h3>
-                <p> $150 </p>
+                <h3 class="nombre-producto"> Juguete Churrasquito </h3>
+                <p class="precio"> $150 </p>
             </article>
 
-            <article>
+            <article class="comedero">
                 <a href="#"> <img src="img/comedero.png" alt="Comedero"> </a>
-                <h3> Comedero para perro </h3>
-                <p> $250 </p>
+                <h3 class="nombre-producto"> Comedero para perro </h3>
+                <p class="precio"> $250 </p>
             </article>
 
-            <article>
+            <article class="hueso">
                 <a href="#"> <img src="img/Huesito.png" alt="Huesito"> </a>
-                <h3> Juguete Huesito </h3>
-                <p> $650 </p>
+                <h3 class="nombre-producto"> Juguete Huesito </h3>
+                <p class="precio"> $650 </p>
             </article>
         </section>
 
-            <section>
-                <h2> Contáctanos </h2>
+            <section class="contacto">
+                <h2 class="contact-title"> Contáctanos </h2>
                 <form action ="">
                     <p><input type="text" placeholder="Nombre y Apellido" required></p>
                     <p><input type="text" placeholder="Correo" required></p>
                     <p><input type="text" placeholder="Teléfono" required></p>
-                    <button type = "submit">Resetear</button>
-                    <button type = "submit">Enviar</button>
+                    <button type = "submit" class="reset">Resetear</button>
+                    <button type = "submit" class="enviar">Enviar</button>
                 </form>
             </section>
         

@@ -1,0 +1,293 @@
+:root{
+    --turquesa: #00669F;
+    --azul-oscuro: #001D2D;
+    --verde-agua: #1CD1B0;
+}
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+/*descuentos*/
+.descuentos{
+    background-color: var(--verde-agua);
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px;
+}
+
+/* con nombre y logo*/
+.main-header{
+    background-color: var(--turquesa);
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    height: 75px;
+    width: 100px;
+}
+
+header h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    padding: 20px;
+    color: white;
+}
+
+/*con nav-bar*/
+li, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none; /* le saco subrayado */
+}
+
+.nav_links {
+    list-style: none;
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.6rem;
+}
+
+.nav_links li {
+    display: inline-block; /* Esto hace que pasen de ser elementos de bloque (columna) a elementos de línea (fila)*/
+    padding: 0px 20px; /* Esto aumenta la separación entre palabras*/
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9; /*Al pasar el cursor se ponen azules*/
+}
+
+/* FORM */
+
+.form-container{
+    background-color: var(--turquesa);
+    width: 950px;
+    height: 830px;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* titulo */
+.form-title{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 72px;
+}
+
+/* subtitulo */
+.form-description{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 14px;
+    margin-bottom: 3rem;
+}
+
+/* inputs */
+.form-group{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.form-label {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 0.3rem;
+}
+
+
+.form-input{
+    border: none;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: inherit; /* Sin esto no usa la font del body */
+    color: inherit;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0); /*transparent values*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0); /*transparent values*/
+    transition: 250ms all ease-in;
+}
+
+
+.form-input:hover {
+    border: 1px solid rgb(189, 3, 58);
+    box-shadow: 0 0 5px grey;
+    background: rgb(255, 195, 247);
+}
+
+/* label de cada input */
+.selection label {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* label de cada selection*/
+.selection p{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {  
+    visibility: hidden;  
+    cursor: pointer;  
+}  
+    
+/* ---------------------- custom checkbox  ----------------------*/
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+  /* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+  /* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+  /* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* ---------------------- custom radiobutton  ----------------------*/
+
+
+/* hago que se formen dos columnas*/
+.row {
+    display: flex;
+}
+.column {
+    flex: 50%;
+}
+
+/* para que el label este arriba del input */
+input, select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 1rem;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/*descripcion*/
+textarea {
+    width: 343px;
+    height: 307px;
+    border-radius: 15px;
+}
+
+/*button*/
+.btn-primary {
+    border: none;
+    background: var(--verde-agua);
+    color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    width: 470px;
+    cursor: pointer;
+    transition: 250ms all ease-in;
+    font-family: 'Roboto';
+    font-style: bold;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: var(--turquesa);
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+}

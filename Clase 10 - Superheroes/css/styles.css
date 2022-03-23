@@ -1,0 +1,89 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper{ /* Esto contiene todos los contenedores o tarjetas */
+    counter-reset: number; /* Dice que cada contenedor va a incrementar el contador*/
+    display: flex; /* Automáticamente los alinea pero se solapan con el título*/
+    flex-wrap: wrap; /*Si agrego más contenedores van a ir abajo*/
+    justify-content: space-around;
+    margin: 4rem 0;
+}
+
+.card {
+    box-shadow: 0px 0px 20px #c4c4c4; /* el color hace que la sombra sea sutil*/
+    border-radius: #c4c4c4;
+    padding: 2rem; /* aumento separación entre contenedores*/
+    width: 400px; /* tamaño fijo de cada contenedor */
+    margin: 0 0.5rem 4rem;
+    background-color: white;
+    text-align: center;
+    position: relative; /* necesito que cada contenedor sea relative porque los circulitos de colores
+                        tienen que depender de ellos, de esta manera al ponerles absolute
+                        a los circulitos van a depender de los contenedores relative*/
+}
+
+header p {
+    background-color: #1CD1B0;
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px;
+    margin: 0px;
+}
+
+header h1{
+    background-color: #00669F;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    padding: 20px;
+    margin: 0px;
+}
+
+.round{
+    border-radius: 50%;
+    top: -2rem;
+}
+
+footer{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFF9F9;
+}
+
+button {
+    background-color: #00669F; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 128.78px;
+    height: 48.52px;
+}
+
+section {
+    display: inline-block;
+    width: 25%;
+    overflow: hidden;
+    margin: 0px;
+}
