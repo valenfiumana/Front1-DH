@@ -2,6 +2,7 @@
     --turquesa: #00669F;
     --azul-oscuro: #001D2D;
     --verde-agua: #1CD1B0;
+    --gris-claro: #CECECE;
 }
 
   *, *:before, *:after {
@@ -80,8 +81,7 @@ li, a {
 
 .form-container{
     background-color: var(--turquesa);
-    width: 950px;
-    height: 830px;
+    width: 950px; /* Si le ponía height, me desacomodaba todo y el boton quedaba afuera */
     padding: 2rem;
     border-radius: 2rem;
     margin: 3rem auto;
@@ -125,12 +125,13 @@ li, a {
     font-weight: 300;
     font-size: 20px;
     margin-bottom: 0.3rem;
+    margin-left: 25px;
 }
 
 
 .form-input{
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 1rem;
     padding: 1rem;
     font-family: inherit; /* Sin esto no usa la font del body */
@@ -148,7 +149,8 @@ li, a {
     background: rgb(255, 195, 247);
 }
 
-/* label de cada input */
+
+/* label de cada input selection */
 .selection label {
     color: white;
     font-family: 'Inter', sans-serif;
@@ -183,8 +185,49 @@ li, a {
     visibility: hidden;  
     cursor: pointer;  
 }  
-    
+
+
+/* hago que se formen dos columnas*/
+.row {
+    display: flex;
+}
+.column {
+    flex: 50%;
+}
+
+/* para que el label este arriba del input */
+input, select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 1rem;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/*descripcion*/
+textarea {
+    width: 390px;
+    height: 307px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+
 /* ---------------------- custom checkbox  ----------------------*/
+.form-group-poderes{
+    display: flex;
+    flex-direction: column;
+}
+
+.poderes-title {
+    margin-bottom: 1rem;
+}
+
+
+.form-group-poderes label {
+    margin-bottom: 0px;
+}
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -230,33 +273,32 @@ li, a {
 }
 
 /* ---------------------- custom radiobutton  ----------------------*/
+/* Heroina-Heroe*/
 
-
-/* hago que se formen dos columnas*/
-.row {
-    display: flex;
-}
-.column {
-    flex: 50%;
+hr{
+    border: 0.5px solid white;
+    margin-bottom: 1rem;
 }
 
-/* para que el label este arriba del input */
-input, select {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 8px 1rem;
-    display: inline-block;
-    box-sizing: border-box;
+.form-group-heroes{
+    max-width: 170px;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 0;
 }
 
-/*descripcion*/
-textarea {
-    width: 343px;
-    height: 307px;
-    border-radius: 15px;
+
+.form-group-heroes label {
+    margin-left: 4px;
 }
 
-/*button*/
+.form-input-radio{
+    margin: 0;
+    max-width: 25px;
+
+}
+
+/* ---------------------- button  ----------------------*/
 .btn-primary {
     border: none;
     background: var(--verde-agua);
@@ -272,13 +314,14 @@ textarea {
     font-style: bold;
     font-size: 40px;
     font-weight: 700;
+    margin-top: 1rem;
 }
 
 .btn-primary:hover {
     background-color: var(--azul-oscuro);
 }
 
-/* FOOTER */
+/* ---------------------- footer ----------------------*/
 footer {
     padding: 20px;
     background: var(--turquesa);

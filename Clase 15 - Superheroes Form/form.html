@@ -59,11 +59,11 @@
                         <label for="name" class="form-label"> Agregar foto </label> 
                         <input type="file" name="foto" accept=".jpg">
                     </div>
-
+                    
                     <div class="selection">
                         <!-- poderes -->
-                        <div class="form-group">
-                            <p> Poderes </p>
+                        <div class="form-group-poderes">
+                            <p class="poderes-title"> Poderes </p>
                             <label for="volar" class="container"> Volar 
                             <input type="checkbox" name="poder" value="1" class="word-selection" checked="checked">
                             <span class="checkmark"></span> </label>
@@ -82,13 +82,14 @@
                             
                         </div>
 
+                        <hr>
                         <!-- Tipo de Personaje -->
-                        <div class="form-group">
+                        <div class="form-group-heroes">
                             <p> Tipo de Personaje </p>
-                            <label for="heroina-heroe" class="form-label"> 
-                                <input type="radio" name="tipoPersonaje" value="1" class="form-input"> Heroína/Héroe </label>
-                            <label for="heroina-heroe" class="form-label"> 
-                                <input type="radio" name="tipoPersonaje" value="1" class="form-input"> Heroína/Héroe </label> 
+                            <label for="heroina-heroe" class="form-label heroina"> 
+                                <input type="radio" name="tipoPersonaje" value="1" class="form-input-radio"> Heroína/Héroe </label>
+                            <label for="heroina-heroe" class="form-label villana"> 
+                                <input type="radio" name="tipoPersonaje" value="1" class="form-input-radio"> Villana/Villano </label> 
                             
                         </div>
                     </div>
