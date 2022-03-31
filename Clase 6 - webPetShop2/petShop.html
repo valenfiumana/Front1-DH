@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="header">
-            <p> Grandes ofertas en comederos </p>
+            <p class="descuentos"> Grandes ofertas en comederos </p>
             
             <form class="language-switcher " method="get"action="#">
                 <select name="lang">
@@ -38,12 +38,15 @@
 
 
         <section class="nav-bar">
-            <a href="petShop.html"> <img src="img\cat.png" alt="gato"> </a>
-            <a href="petShop.html" class="front"> Front </a> 
-            <a href="petShop.html" class="cat&dog"> Cat&Dog </a> 
-            <a href="petShop.html"> <img src="img\dog.png" alt="perro"> </a>
+            <div class="logo"> 
+                <a href="petShop.html"> <img src="img\cat.png" alt="gato"> </a>
+                <a href="petShop.html" class="front"> Front </a> 
+                <a href="petShop.html" class="catdog"> Cat&Dog </a> 
+                <a href="petShop.html"> <img src="img\dog.png" alt="perro"> </a>
+            </div>
+            
             <nav>
-                <ul class="list-pawprint">
+                <ul class="nav_links">
                     <li><a href="">Categorias</a></li>
                     <li><a href="">Pets</a></li>
                     <li><a href="">Nosotros</a></li>
@@ -53,24 +56,25 @@
         </section>
     </header>
     
-
     <main>
-        <section>
+        <section class="container">
             <img width="100%" src="img/bowl-and-pet.png" alt="Comida para perros">
             <h2> ¡Es un placer tenerte aquí! </h2>
             <p> ¡Comederos en descuento! </p>
-            <button type="button" class="boton-producto"> COMEDEROS </button>
+            <a href="url" class="boton-producto">COMEDEROS</a>
         </section>
 
         <section class="destacados">
-            <h1 class="title"> Productos Destacados</h1>
-            <img src = "img/pawprint.png" alt="Huellita">
-            <ul>
-                <li class="link-producto"> Comederos </li>
-                <li class="link-producto"> Accesorios </li>
-                <li class="link-producto"> Comida </li>
-            </ul>
-
+            <div class="destacados"> 
+                <img src = "img/pawprint.png" alt="Huellita">
+                <h1 class="title"> Productos Destacados</h1>
+                <ul>
+                    <li class="link-producto"> Comederos </li>
+                    <li class="link-producto"> Accesorios </li>
+                    <li class="link-producto"> Comida </li>
+                </ul>
+            </div>
+            
             <article class="juguete">
                 <a href="#"> <img src="img/churrasquito.png" alt="Juguete churrasquito"> </a>
                 <h3 class="nombre-producto"> Juguete Churrasquito </h3>

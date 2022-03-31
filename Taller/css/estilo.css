@@ -1,0 +1,167 @@
+:root{
+    --clr-dark-grey: #222222;
+    --clr-light-grey: #C4C4C4;
+    --clr-white: #F3F3F3;
+    --clr-red: #D01418;
+    --clr-twitter-blue: #14AED0;
+    --clr-facebook-blue: #1476D0;
+    --clr-instagram-purple: #CE0CFF;
+    --clr-bg-grey:  #e7e8e9;
+    --clr-verde-seco: #619D00;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    /* El body tiene el 100% del ancho de la pantalla y el alto depende del contenido que le ponga*/
+}
+
+/* HEADER */
+a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--clr-white);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--clr-dark-grey);
+    padding: 35px 38px;
+}
+
+header div{
+    display: flex;
+}
+
+/* "Game" */
+header div h1{
+    color: var(--clr-white);
+    margin-left: 20px;
+}
+
+/* "Shop" */
+header div h1 span{
+    color: var(--clr-red);
+}
+
+/* Nav list */
+header nav ul{
+    display: flex; /* uno al lado del otro*/
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-left: 8px;
+}
+
+/* shopping cart */
+header nav ul li:nth-child(5) a i{
+    color: var(--clr-red);
+    margin-left: 46px;
+
+}
+
+/* BANNER */
+main section.banner{
+    height: calc(100vh);
+    background-image: url(../img/purple-bg.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* titulo */
+main section.banner h4{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--clr-white);
+}
+
+/* numero del titulo*/
+main section.banner h4 span{
+    color: var(--clr-red);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+/* boton*/
+main section.banner button{
+    border: none;
+    border-radius: 5px;
+    padding: 16px 61px;
+    background: var(--clr-red);
+    margin-top: 30px;
+    /*texto*/
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--clr-white);
+}
+
+/* PRODUCTS */
+main section.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--clr-bg-grey);
+}
+
+main section.products h2{
+    margin: 40px 0 20px;
+}
+main section.products div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main section.products div article{
+    width: 300px;
+    padding: 30px 20px 20px;
+}
+
+main section.products div article img{
+    margin-bottom: 30px;
+}
+
+
+main section.products span.precio{
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+main section.products span.cuotas{
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    }
+
+main section.products span.envio{
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--clr-verde-seco);
+}

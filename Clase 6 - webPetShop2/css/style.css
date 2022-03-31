@@ -1,3 +1,8 @@
+:root{
+    --gris-oscuro: #222222;
+    --naranja: #F0A83E;
+    --marron: #3C2313;
+}
 *{
     box-sizing: border-box;
     padding: 0px;
@@ -11,23 +16,133 @@ html, body{
 /* HEADER */
 
 .header{
-    background-color: #222222;
+    background-color: var(--gris-oscuro);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.descuentos {
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     color: white;
-
+    margin-right: auto;
+    margin-left: 5rem;
+    
 }
 
 .nav-bar{
-    background-color: #F0A83E;
+    background-color: var(--naranja);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
 }
 
-.list-pawprint {
-    list-style-image: url('pawprintWhite.png');
+/* LOGO */
+.front, .catdog {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-decoration: none;
 }
 
+.front{
+    color: var(--marron);
+}
+
+.catdog{
+    color: white;
+}
+
+.logo{
+    margin-right: auto;
+}
+
+/* SECCIONES */
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block; /* Esto hace que pasen de ser elementos de bloque (columna) a elementos de línea (fila)*/
+    padding: 0px 20px; /* Esto aumenta la separación entre palabras*/
+}
+
+.nav_links a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.nav li{
+    display: inline;
+}
+
+/* FOTO CON TEXTO */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* titulo */
+.container h2{
+    position: absolute;
+    top: 37%;
+    right: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--marron);
+    background-color: white;
+    padding: 0.7rem;
+}
+
+/* subtitulo */
+.container p{
+    position: absolute;
+    color: var(--marron);
+    top: 54%;
+    right: 7rem;
+}
+
+/* boton */
+.boton-producto {
+    position: absolute;
+    top: 60%;
+    right: 9.5rem;
+    border-style: none;
+    background-color: var(--naranja);
+    color: white;
+    padding: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.destacados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destacados img {
+    width: 67px;
+    height: 70px;
+    
+}
 .bg-orange{
     background-color: #F0A83E;
 }
